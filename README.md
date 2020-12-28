@@ -10,11 +10,11 @@ Laravel 8
 
 
 # Folder structure
-/data  ## Your database Data  
-/data/mongo
-/data/mysql
-/laradock ## enviroment
-/www ## the laravel 8
+- /data  ## Your database Data  
+- /data/mongo
+- /data/mysql
+- /laradock ## enviroment
+- /www ## the laravel 8
 
 # Check out with the submodule
 git clone --recursive https://github.com/melcshum/LaradockEnvSetup.git
