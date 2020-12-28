@@ -20,7 +20,7 @@ Voyager
 - /laradock ## enviroment
 - /www ## the laravel 8
 
-# Check out with the submodule
+# Check out with Laradock
 git clone --recursive https://github.com/melcshum/LaradockEnvSetupV1.git
 
 #Setup Development Environment
