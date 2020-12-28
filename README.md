@@ -10,7 +10,7 @@ Laravel 8.x
 Laradock
 - https://laradock.io/
 
-
+Voyager
 - https://github.com/the-control-group/voyager
 
 # Folder structure
