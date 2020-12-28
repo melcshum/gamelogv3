@@ -1,4 +1,4 @@
-# # Laradock 8 Environment Setup with voyager 
+# Laradock 8 Environment Setup with voyager 
 
 This Environment is enable 
 * hybrid databse: mysql, mongo,
