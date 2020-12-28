@@ -4,10 +4,11 @@ This Environment is enable
 * hybrid databse: mysql, mongo,
 * Admin plaftorm : Laravel voyager 
 
-Laravel 8 
+Laravel 8.x 
 - https://laravel.com/docs/8.x/releases
 
-
+Laradock
+https://laradock.io/
 
 # Folder structure
 - /data  ## Your database Data  
