@@ -1,14 +1,17 @@
-# Laradock Environment  Setup
+# # Laradock 8 Environment Setup with voyager 
 
 This Environment is enable 
 * hybrid databse: mysql, mongo,
 * Admin plaftorm : Laravel voyager 
 
 Laravel 8.x 
-- https://laravel.com/docs/8.x/releases
+- https://laravel.com/docs/8.x/
 
 Laradock
-https://laradock.io/
+- https://laradock.io/
+
+Voyager
+- https://github.com/the-control-group/voyager
 
 # Folder structure
 - /data  ## Your database Data  
@@ -121,8 +124,6 @@ Schema::connection('mongodb')->table('test', function (Blueprint $collection) {
 
 # Setup Laravel voyager admin platform
 
-Ref
-https://github.com/the-control-group/voyager
 
 ```
 composer require tcg/voyager
