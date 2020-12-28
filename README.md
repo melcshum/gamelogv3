@@ -1,4 +1,4 @@
-# Laradock 8 Environment Setup with voyager 
+# Laradock 8 and Voyager with Laradock Environment Setup  
 
 This Environment is enable 
 * hybrid databse: mysql, mongo,
@@ -10,7 +10,7 @@ Laravel 8.x
 Laradock
 - https://laradock.io/
 
-Voyager
+
 - https://github.com/the-control-group/voyager
 
 # Folder structure
