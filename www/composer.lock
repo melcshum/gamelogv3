@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "79ea6ebc559d3c912714e59cae357e22",
+    "content-hash": "c833939195ca4e9e63ec57d5b35d260d",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -2295,6 +2295,54 @@
             "time": "2020-03-04T21:35:18+00:00"
         },
         {
+            "name": "laravel-frontend-presets/paper",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-frontend-presets/paper-dashboard.git",
+                "reference": "244b2c26edf87c67411b2bc327d2c67d06993441"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-frontend-presets/paper-dashboard/zipball/244b2c26edf87c67411b2bc327d2c67d06993441",
+                "reference": "244b2c26edf87c67411b2bc327d2c67d06993441",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.0",
+                "laravel/legacy-factories": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelFrontendPresets\\PaperPreset\\PaperPresetServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelFrontendPresets\\PaperPreset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel 5.x Front-end preset for paper dashboard",
+            "homepage": "https://github.com/creativetimofficial/paper-dashboard-laravel",
+            "keywords": [
+                "laravel",
+                "paper",
+                "preset"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-frontend-presets/paper-dashboard/issues",
+                "source": "https://github.com/laravel-frontend-presets/paper-dashboard/tree/1.0.4"
+            },
+            "time": "2020-09-21T11:36:08+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v8.20.1",
             "source": {
@@ -2516,6 +2564,62 @@
                 "source": "https://github.com/laravel/helpers/tree/v1.4.0"
             },
             "time": "2020-11-03T16:38:41+00:00"
+        },
+        {
+            "name": "laravel/legacy-factories",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/legacy-factories.git",
+                "reference": "5e3fe2fd5fda64e20ea5c74c831a7346294e902a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/legacy-factories/zipball/5e3fe2fd5fda64e20ea5c74c831a7346294e902a",
+                "reference": "5e3fe2fd5fda64e20ea5c74c831a7346294e902a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/macroable": "^8.0",
+                "php": "^7.3|^8.0",
+                "symfony/finder": "^3.4|^4.0|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Illuminate\\Database\\Eloquent\\LegacyFactoryServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "helpers.php"
+                ],
+                "psr-4": {
+                    "Illuminate\\Database\\Eloquent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The legacy version of the Laravel Eloquent factories.",
+            "homepage": "http://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2020-10-27T14:25:32+00:00"
         },
         {
             "name": "laravel/passport",
