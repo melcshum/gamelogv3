@@ -165,7 +165,8 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
+        TCG\Voyager\VoyagerServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -227,6 +228,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'Mongo'     => Jenssegers\Mongodb\MongodbServiceProvider::class,
     ],
 
 ];
