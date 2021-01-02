@@ -37,6 +37,11 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->configureRateLimiting();
 
+
+        Route::bind('gameslug', function ($gameslug) {
+            return \App\Models\Game::where('slug', $gameslug)->first() ?? abort(404);
+        });
+
         $this->routes(function () {
             Route::prefix('api')
                 ->middleware('api')

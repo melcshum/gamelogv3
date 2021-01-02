@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Api\XAPIStatmentController;
 use App\Http\Controllers\Api\ScenariosController;
+use App\Http\Controllers\Api\GameSessionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +22,21 @@ use App\Http\Controllers\Api\ScenariosController;
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [RegisterController::class, 'login']);
 
+
+
+Route::post('/protocols/getNewSession', [GameSessionsController::class, 'newSession']);
+Route::get('/protocols/start', [GameSessionsController::class, 'start']);
+
+
 //Route::middleware('auth:api')->group( function () {
-    Route::resource('xapi/statements', XAPIStatmentController::class);
+
+Route::get('/xapi/statements/{sessioneky}', [XAPIStatmentController::class, 'showBySession']);
+Route::apiresource('xapi/statements', XAPIStatmentController::class);
 //});
 
 
-Route::apiResource('/scenarios', ScenariosController::class);
+Route::apiResource('xapi/gamescenarios', ScenariosController::class);
+
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

@@ -5,6 +5,10 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\BaseController as BaseController;
 use App\Models\XApiStatement;
+use App\Models\SessionXapiStatement;
+use App\Models\GameSession;
+use DB;
+
 use Validator;
 use App\Http\Resources\XApiStatement as XApiStatementResource;
 
@@ -41,11 +45,24 @@ class XAPIStatmentController extends BaseController
         // }
 
 
+
+        $request->input('session_id');
+
         $json = json_decode($request->getContent(), true);
 
         $xapiStatement = XApiStatement::create($json);
 
-        return $this->sendResponse( $xapiStatement, 'XapiStatement created successfully.');
+        $gamesession = GameSession::where('session', '=', $request->input('session_key'))->first();
+
+        SessionXapiStatement::create([
+            'session_id' =>  $gamesession->id,
+            'xapi_id' => $xapiStatement->id
+        ]);
+
+        //        return $xapiStatement->id;
+        //      return response()->json([$json], 200);
+
+        return $this->sendResponse($xapiStatement, 'XapiStatement created successfully.');
     }
 
     /**
@@ -64,6 +81,25 @@ class XAPIStatmentController extends BaseController
 
         return $this->sendResponse(new XApiStatementResource($xapiStatement), 'XapiStatement retrieved successfully.');
     }
+
+    public function showBySession($session_key)
+    {
+
+
+        $gamesession =    GameSession::with("session_xapi_statement")->where('session', '=', $session_key)->first();
+
+        $xapis = $gamesession->session_xapi_statement;
+
+        $XApiStatements= XApiStatement::whereIn('_id', $xapis->pluck('xapi_id'))->get();
+
+
+
+          return $this->sendResponse($XApiStatements, 'XapiStatement retrieved successfully.');
+        //
+    }
+
+
+
 
     /**
      * Update the specified resource in storage.

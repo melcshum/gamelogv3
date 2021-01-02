@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePlayersTable extends Migration
+class CreateXapiProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePlayersTable extends Migration
      */
     public function up()
     {
-        Schema::create('players', function (Blueprint $table) {
+        Schema::create('xapi_profiles', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
 
@@ -34,7 +34,7 @@ class CreatePlayersTable extends Migration
     public function down()
     {
         DB::statement('SET FOREIGN_KEY_CHECKS = 0');
-        Schema::dropIfExists('players');
+        Schema::dropIfExists('xapi_profiles');
         DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

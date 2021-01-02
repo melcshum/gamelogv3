@@ -42,8 +42,8 @@ class User extends \TCG\Voyager\Models\User
         'email_verified_at' => 'datetime',
     ];
 
-    public function player()
+    public function xapi_profile()
     {
-        return $this->hasOne(Player::class);
+        return $this->hasOne(XapiProfile::class);
     }
 }

@@ -3,13 +3,15 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Modles\User;
+use App\Models\User;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Player extends Model
+class XapiProfile extends Model
 {
     use HasFactory;
+    protected $table = 'xapi_profiles';
+
 
     protected $fillable = [
         'name'
@@ -22,7 +24,7 @@ class Player extends Model
 
     public function getUrlAttribute()
     {
-        return route('Player.show', $this->id);
+        return route('xapiprofiles.show', $this->id);
     }
 
     public function game_sessions()

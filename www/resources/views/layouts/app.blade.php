@@ -51,16 +51,18 @@ The above copyright notice and this permission notice shall be included in all c
     @endauth
 
     @guest
-        @include('layouts.page_templates.guest')
-    @endguest
+        {{-- @include('layouts.page_templates.guest') --}}
 
+        @include('layouts.page_templates.game')
+        @include('layouts.navbars.fixed-plugin')
+    @endguest
     <!--   Core JS Files   -->
     <script src="{{ asset('paper') }}/js/core/jquery.min.js"></script>
     <script src="{{ asset('paper') }}/js/core/popper.min.js"></script>
     <script src="{{ asset('paper') }}/js/core/bootstrap.min.js"></script>
     <script src="{{ asset('paper') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
     <!--  Google Maps Plugin    -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+    {{-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> --}}
     <!-- Chart JS -->
     <script src="{{ asset('paper') }}/js/plugins/chartjs.min.js"></script>
     <!--  Notifications Plugin    -->
@@ -70,7 +72,7 @@ The above copyright notice and this permission notice shall be included in all c
     <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
     <script src="{{ asset('paper') }}/demo/demo.js"></script>
     <!-- Sharrre libray -->
-    <script src="../assets/demo/jquery.sharrre.js"></script>
+     <script src="{{ env('APP_URL') }}/paper/demo/jquery.sharrre.js"></script>
 
     @stack('scripts')
 

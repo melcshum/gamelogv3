@@ -21,4 +21,8 @@ class XApiStatement extends Eloquent
     // ];
 
     protected $guarded = [];
+
+    public function session() {
+        return $this->belongsTo('App\Models\GameSession','id' );
+    }
 }

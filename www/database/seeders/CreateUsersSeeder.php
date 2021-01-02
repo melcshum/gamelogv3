@@ -6,7 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
 use App\Models\User;
-use App\Models\Player;
+use App\Models\XapiProfile;
 
 class CreateUsersSeeder extends Seeder
 {
@@ -48,8 +48,8 @@ class CreateUsersSeeder extends Seeder
                 ]
 
             );
-            $u->player()->save(
-                Player::create(
+            $u->xapi_profile()->save(
+                XapiProfile ::create(
                     [
                         'name' =>   Str::slug($u->name, '.'),
                         'is_admin' => 0,

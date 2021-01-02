@@ -20,12 +20,12 @@ class GameTableSeeder extends Seeder
         $games = [
             [
                 'name' => 'GhostCoder Java',
-                'desc' => 'Players fight against the Ghost Coder and build thier HP in programming  ',
+                'desc' => 'Player fights JAVA programming syntax against the Ghost Coder   ',
                 'purpose' => 'Learning Programming Syntax',
             ],
             [
                 'name' => 'GhostCoder VB',
-                'desc' => 'Players fight against the Ghost Coder and build thier HP in programming  ',
+                'desc' => 'Player fights VB programming syntax against the Ghost Coder   ',
                 'purpose' => 'Learning Programming Syntax',
             ],
 

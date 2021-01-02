@@ -12,7 +12,7 @@ class GameSession extends Model
 
 
     protected $fillable = [
-        'session', 'profile_id', 'game_id'
+        'session', 'xapiprofile_id', 'game_id'
     ];
 
     public function game()
@@ -25,9 +25,8 @@ class GameSession extends Model
         return $this->belongsTo(Profile::class);
     }
 
-    public function interactions()
+    public function session_xapi_statement()
     {
-        return $this->hasMany(App\Interaction::class);
+        return $this->hasMany(SessionXapiStatement::class, 'session_id', 'id');
     }
-
 }

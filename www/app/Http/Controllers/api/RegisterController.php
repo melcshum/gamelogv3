@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Validator;
 
+
 class RegisterController extends BaseController
 {
     /**
